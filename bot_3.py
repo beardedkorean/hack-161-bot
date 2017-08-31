@@ -71,6 +71,9 @@ def check_answer(message):
     bot.send_message(mine_id, "Подсказка 3")
     bot.send_message(hach_id, "Подсказка 3")
 
+@bot.message_handler(content_types=['text'])
+def check_answer(message):
+    bot.send_message(mine_id, "Хач мне прислал" + message.text)
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)

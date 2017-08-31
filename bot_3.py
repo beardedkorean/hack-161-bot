@@ -5,19 +5,17 @@ import telebot
 import time
 
 
-#mine_id = 90753007
-#id[1] = 315974254
-#varya_id = ""
+#мой id 90753007
+#Хачикяна id 315974254
+#Вари id
 
 id = [90753007, 315974254]
 bot = telebot.TeleBot(config.token)
 
-#@bot.message_handler(commands=['game'])
-#def game(message):
 
 @bot.message_handler(regexp="пересыл")
 def check_answer(message):
-    bot.send_message(id[0], message.text[8:])
+    bot.send_message(id[1], message.text[8:])
 
 @bot.message_handler(regexp="триггер_1")
 def check_answer(message):
